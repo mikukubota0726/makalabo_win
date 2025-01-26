@@ -6,7 +6,7 @@ public class HelpPanelController : MonoBehaviour
     public GameObject helpPanel;  // 各プルダウンパネルを参照
     public Button toggleButton;   // 各ボタンを参照
     public GameObject helpContent; // HelpContentオブジェクトを参照
-    public Button topItemButton;  // 一番上の項目ボタン
+    //public Button topItemButton;  // 一番上の項目ボタン
 
     private bool isPanelVisible = false;
 
@@ -17,7 +17,7 @@ public class HelpPanelController : MonoBehaviour
         helpPanel.SetActive(false); // 初期状態ではパネルを非表示にする
 
         // 一番上の項目（ボタン）を固定する
-        SetTopItemFixed();
+        //SetTopItemFixed();
     }
 
     void TogglePanelVisibility()
@@ -28,15 +28,5 @@ public class HelpPanelController : MonoBehaviour
 
         // HelpContentのサイズを調整して、他のボタンが下に移動するようにする
         LayoutRebuilder.ForceRebuildLayoutImmediate(helpContent.GetComponent<RectTransform>());
-    }
-
-    void SetTopItemFixed()
-    {
-        // 一番上の項目ボタン（topItemButton）を固定する
-        LayoutElement layoutElement = topItemButton.GetComponent<LayoutElement>();
-        if (layoutElement != null)
-        {
-            layoutElement.preferredHeight = topItemButton.GetComponent<RectTransform>().rect.height;
-        }
     }
 }

@@ -19,14 +19,14 @@ public class RecipeManager : MonoBehaviour
         List<Recipe> randomRecipe = dbManager.GetRandomRecipe(10);
 
         // 取得したレシピをコンソールに表示
-        foreach (var recipe in randomRecipe)
-        {
-            Debug.Log("レシピID: " + recipe.RecipeID);
-            Debug.Log("レシピ名: " + recipe.RecipeName);
-            Debug.Log("画像パス: " + recipe.ImagePath);
-            Debug.Log("詳細: " + recipe.Details);
-            Debug.Log("------------------------");
-        }
+        //foreach (var recipe in randomRecipe)
+        //{
+        //    Debug.Log("レシピID: " + recipe.RecipeID);
+        //    Debug.Log("レシピ名: " + recipe.RecipeName);
+        //    Debug.Log("画像パス: " + recipe.ImagePath);
+        //    Debug.Log("詳細: " + recipe.Details);
+        //    Debug.Log("------------------------");
+        //}
 
         // データベースを閉じる
         //dbManager.CloseDatabase();

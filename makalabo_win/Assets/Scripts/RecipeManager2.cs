@@ -323,7 +323,7 @@ public class RecipeManager2 : MonoBehaviour
             yield break; // 画像の読み込みを停止
         }
 
-        Debug.Log("RecipeManager最下部 Loading image for bookmark: " + imagePath);
+        //Debug.Log("RecipeManager最下部 Loading image for bookmark: " + imagePath);
         string resourcePath = System.IO.Path.GetFileNameWithoutExtension(imagePath); // 拡張子を削除
         ResourceRequest request = Resources.LoadAsync<Texture2D>(resourcePath);
         yield return request;
@@ -332,7 +332,7 @@ public class RecipeManager2 : MonoBehaviour
         {
             Texture2D texture = request.asset as Texture2D;
             image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-            Debug.Log("Image successfully loaded!");
+            //Debug.Log("Image successfully loaded!");
         }
         else
         {
